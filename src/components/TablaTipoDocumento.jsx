@@ -10,6 +10,7 @@ const Tabla = () => {
             <th>Descripcion</th>
             <th>Cuenta Contable</th>
             <th>Estado</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -17,16 +18,40 @@ const Tabla = () => {
             <td>1</td>
             <td>Domenic</td>
             <td>88,110</td>
+            <td>
+              <button type="button" className="btn btn-primary">
+                Editar
+              </button>
+              <button type="button" className="btn btn-danger">
+                Eliminar
+              </button>
+            </td>
           </tr>
           <tr>
             <td>2</td>
             <td>Sally</td>
             <td>72,400</td>
+            <td>
+              <button type="button" className="btn btn-primary">
+                Editar
+              </button>
+              <button type="button" className="btn btn-danger">
+                Eliminar
+              </button>
+            </td>
           </tr>
           <tr>
             <td>3</td>
             <td>Nick</td>
             <td>52,300</td>
+            <td>
+              <button type="button" className="btn btn-primary">
+                Editar
+              </button>
+              <button type="button" className="btn btn-danger">
+                Eliminar
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>

@@ -13,6 +13,7 @@ const Tabla = () => {
             <th>Fecha</th>
             <th>Cliente</th>
             <th>Monto</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -23,6 +24,14 @@ const Tabla = () => {
             <td>88,110</td>
             <td>Domenic</td>
             <td>88,110</td>
+            <td>
+              <button type="button" className="btn btn-primary">
+                Editar
+              </button>
+              <button type="button" className="btn btn-danger">
+                Eliminar
+              </button>
+            </td>
           </tr>
           <tr>
             <td>2</td>
@@ -31,6 +40,14 @@ const Tabla = () => {
             <td>88,110</td>
             <td>Domenic</td>
             <td>88,110</td>
+            <td>
+              <button type="button" className="btn btn-primary">
+                Editar
+              </button>
+              <button type="button" className="btn btn-danger">
+                Eliminar
+              </button>
+            </td>
           </tr>
           <tr>
             <td>3</td>
@@ -39,6 +56,14 @@ const Tabla = () => {
             <td>88,110</td>
             <td>Domenic</td>
             <td>88,110</td>
+            <td>
+              <button type="button" className="btn btn-primary">
+                Editar
+              </button>
+              <button type="button" className="btn btn-danger">
+                Eliminar
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>

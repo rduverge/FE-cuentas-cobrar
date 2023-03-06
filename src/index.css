@@ -472,3 +472,7 @@ body .modal {
     font-weight: bold;
     color: #6074fc;
 }
+
+.btn{
+    margin: 5px;
+}
