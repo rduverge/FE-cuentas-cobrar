@@ -2,7 +2,7 @@ import React from "react";
 
 const Tabla = () => {
   return (
-    <div className="content-table">
+    <div className="table">
       <h1 className="content-table">Asientos Contables</h1>
       <table className="content-table">
         <thead>
