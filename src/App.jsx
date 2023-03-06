@@ -5,6 +5,7 @@ import IconoNuevo from "./components/routes/img/cerrar.svg";
 import TablaTipoDocumento from "./components/TablaTipoDocumento";
 import TablaTransaccion from "./components/TablaTransaccion";
 import TablaAsientos from "./components/TablaAsientos";
+import TablaClientes from "./components/TablaClientes";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -24,7 +25,7 @@ function App() {
     if (page === "/") {
       return <TablaTipoDocumento />;
     } else if (page === "/ModalClientes") {
-      console.log("clientes");
+      return <TablaClientes />;
     } else if (page === "/ModalTransacciones") {
       return <TablaTransaccion />;
     } else if (page === "/ModalAsientos") {
