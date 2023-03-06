@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "./components/Modal";
 import Header from "./components/Header";
-import IconoNuevo from "./components/routes/img/cerrar.svg";
+import IconoNuevo from "./img/nuevo-gasto.svg";
 import TablaTipoDocumento from "./components/TablaTipoDocumento";
 import TablaTransaccion from "./components/TablaTransaccion";
 import TablaAsientos from "./components/TablaAsientos";
@@ -10,10 +10,8 @@ import TablaClientes from "./components/TablaClientes";
 function App() {
   const [modal, setModal] = useState(false);
   const [animarModal, setAnimarModal] = useState(false);
-
   const handleNuevoGasto = () => {
     setModal("true");
-
     setTimeout(() => {
       setAnimarModal(true);
     }, 500);
@@ -21,6 +19,7 @@ function App() {
 
   const [page, setPage] = useState("/");
 
+  
   const getContent = () => {
     if (page === "/") {
       return <TablaTipoDocumento />;
@@ -35,7 +34,7 @@ function App() {
 
   const toPage = (page) => (event) => {
     event.preventDefault();
-    setPage(page)
+    setPage(page);
   };
 
   return (
@@ -64,11 +63,11 @@ function App() {
           </a>
         </li>
       </ul>
-
+      {getContent()}
       <div className="nuevo-gasto">
         <img src={IconoNuevo} alt="iconnew" onClick={handleNuevoGasto} />
       </div>
-      {getContent()}
+
       {modal && (
         <Modal
           setModal={setModal}
