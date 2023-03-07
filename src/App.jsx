@@ -1,11 +1,14 @@
 import { useState } from "react";
-import Modal from "./components/Modal";
 import Header from "./components/Header";
 import IconoNuevo from "./img/nuevo-gasto.svg";
 import TablaTipoDocumento from "./components/TablaTipoDocumento";
 import TablaTransaccion from "./components/TablaTransaccion";
 import TablaAsientos from "./components/TablaAsientos";
 import TablaClientes from "./components/TablaClientes";
+import ModalTipoDocumento from "./components/ModalTipoDocumento";
+import ModalAsientos from "./components/ModalAsientos";
+import ModalTransacciones from "./components/ModalTransacciones";
+import ModalClientes from "./components/ModalClientes";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -19,7 +22,6 @@ function App() {
 
   const [page, setPage] = useState("/");
 
-  
   const getContent = () => {
     if (page === "/") {
       return <TablaTipoDocumento />;
@@ -29,6 +31,42 @@ function App() {
       return <TablaTransaccion />;
     } else if (page === "/ModalAsientos") {
       return <TablaAsientos />;
+    }
+  };
+
+  const getContentModal = () => {
+    if (page === "/") {
+      return (
+        <ModalTipoDocumento
+          setModal={setModal}
+          animarModal={animarModal}
+          setAnimarModal={setAnimarModal}
+        />
+      );
+    } else if (page === "/ModalClientes") {
+      return (
+        <ModalClientes
+          setModal={setModal}
+          animarModal={animarModal}
+          setAnimarModal={setAnimarModal}
+        />
+      );
+    } else if (page === "/ModalTransacciones") {
+      return (
+        <ModalTransacciones
+          setModal={setModal}
+          animarModal={animarModal}
+          setAnimarModal={setAnimarModal}
+        />
+      );
+    } else if (page === "/ModalAsientos") {
+      return (
+        <ModalAsientos
+          setModal={setModal}
+          animarModal={animarModal}
+          setAnimarModal={setAnimarModal}
+        />
+      );
     }
   };
 
@@ -64,17 +102,12 @@ function App() {
         </li>
       </ul>
       {getContent()}
+
       <div className="nuevo-gasto">
         <img src={IconoNuevo} alt="iconnew" onClick={handleNuevoGasto} />
       </div>
 
-      {modal && (
-        <Modal
-          setModal={setModal}
-          animarModal={animarModal}
-          setAnimarModal={setAnimarModal}
-        />
-      )}
+      {modal && getContentModal()}
     </div>
   );
 }

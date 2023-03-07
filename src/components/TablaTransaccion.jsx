@@ -1,10 +1,10 @@
 import React from "react";
 
 const Tabla = () => {
-    return (
-        <div className='table'>
-                <h1 className="content-table">Transacciones</h1>
-                <table className="content-table">
+  return (
+    <div className="table">
+      <h1 className="content-table">Transacciones</h1>
+      <table className="content-table">
         <thead>
           <tr>
             <th>Tipo de Movimiento</th>
@@ -67,8 +67,8 @@ const Tabla = () => {
           </tr>
         </tbody>
       </table>
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default Tabla
+export default Tabla;
